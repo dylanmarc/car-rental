@@ -1,38 +1,106 @@
-.App {
+/*
+Font: Open Sans • Title color: #CE0E2D • Standard text color: #2D2A26 • Headers text color: #758692
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Setting main colours as variables for flexibility */
+:root{
+    --title: #CE0E2D;
+    --standard: #2D2A26;
+    --header: #758692;
+    background-color: white;
+}
+
+/* Main styles */
+.main{
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
+  margin: auto;
+}
+.title{
+  color: var(--title);
+}
+h1, h2{
+  color: var(--header);
+}
+.standard, p{
+  color: var(--standard);
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Car card */
+.car{
+  background-color: rgb(250, 250, 250);
+  box-shadow: 5px 10px 8px lightgrey;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px auto;
+  border: 1px solid var(--header);
+  border-radius: 10px;
+  width: 75vw;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid (var(--standard));
+}
+.top-txt{
+  text-align: left;
+  margin-left: 20px;
+  flex: 4;
+  padding-bottom: 10px;
+}
+.buttons{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+}
+
+/* Button stylings */
+button{
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  margin: 10px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #375E5E;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+button:hover{
+  background-color: slategray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Input form stylings */
+input{
+  margin: 20px 0 5px 0;
+  border: 1px solid var(--header);
+}
+.history, .edit-form{
+  border-top: 1px solid var(--header);
+  padding: 20px 0;
+}
+.add-form{
+  background-color: rgb(250, 250, 250);
+  border: 1px solid var(--header);
+  box-shadow: 5px 10px 8px lightgrey;
+  border-radius: 10px;
+  width: 40vw;
+  margin: auto;
+}
+ul{
+  padding: 0;
+}
+
+/* Media query for mobile responsiveness */
+@media(max-width:850px){
+  .add-form{
+    width: 95vw;
   }
-  to {
-    transform: rotate(360deg);
+  .car{
+    width: 95vw;
+    
   }
 }
