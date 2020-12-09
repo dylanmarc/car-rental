@@ -237,7 +237,7 @@ export default class App extends React.Component {
         <div className='add-car'>
           <div className='add-form'>
             <form>
-              <label>Make: </label><input type='text' name='make' maxLength='4' placeholder='Toyota' value={this.state.make} onChange={this.handleMakeChange} /><br />
+              <label>Make: </label><input type='text' name='make' placeholder='Toyota' value={this.state.make} onChange={this.handleMakeChange} /><br />
               <label>Model: </label><input type='text' name='model' placeholder='Corolla' value={this.state.model} onChange={this.handleModelChange} /><br />
               <label>Year: </label><input type='number' name='year' placeholder='2010' value={this.state.year} onChange={this.handleYearChange} /><br />
               <label>Seats: </label><input type='number' name='seats' placeholder='4' value={this.state.seats} onChange={this.handleSeatsChange} /><br />
